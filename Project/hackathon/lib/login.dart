@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/feed.dart';
-class HomeScreen extends StatefulWidget {
+class Login extends StatefulWidget {
   @override
-  _HomeScreenState createState() => new _HomeScreenState();
+  LoginScreenState createState() => new LoginScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class LoginScreenState extends State<Login> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
 
   @override

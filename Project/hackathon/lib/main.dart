@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: new SplashScreen(),
       routes: <String, WidgetBuilder>{
-        '/HomeScreen': (BuildContext context) => new HomeScreen()
+        '/HomeScreen': (BuildContext context) => new Login()
       },
     );
   }
