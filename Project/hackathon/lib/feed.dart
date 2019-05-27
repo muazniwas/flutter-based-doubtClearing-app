@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:hackathon/Tabs/tab1.dart';
 import 'package:hackathon/Tabs/tab2.dart';
 import 'package:hackathon/Tabs/tab3.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Feed extends StatefulWidget {
+  final FirebaseUser user;
+  Feed({Key key, this.user}) : super(key: key);
+
   Momstabs createState() => new Momstabs();
   
 }
@@ -31,7 +35,7 @@ class Momstabs extends State<Feed>  with SingleTickerProviderStateMixin {
     return new Scaffold(
       appBar: new AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        title: new Text('WhatsApp'),
+        title: new Text('#Hack19'),
         elevation: 0.7,
         bottom: new TabBar(
           controller: _tabcontroller,
@@ -47,7 +51,7 @@ class Momstabs extends State<Feed>  with SingleTickerProviderStateMixin {
       controller: _tabcontroller,
       children: <Widget>[
         new Tab1(),
-        new Tab2(),
+        new Tab2(userEmail: widget.user.email,),
         new Tab3(),
 
       ],
