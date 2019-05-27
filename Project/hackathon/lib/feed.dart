@@ -5,6 +5,7 @@ import 'package:hackathon/Tabs/tab3.dart';
 
 class Feed extends StatefulWidget {
   Momstabs createState() => new Momstabs();
+  
 }
 
 class Momstabs extends State<Feed>  with SingleTickerProviderStateMixin {
