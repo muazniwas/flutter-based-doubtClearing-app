@@ -15,14 +15,23 @@ class LoginScreenState extends State<Login> {
         title: Text('My firebase app'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
+          Image.asset(
+                'assets/images/fLogo.png',width: 250,
+                height:  250,),
           RaisedButton(
+            padding: const EdgeInsets.all(8.0),
+            textColor: Colors.white,
+            color: Colors.blue,
             onPressed: navigateToSignIn,
             child: Text('Sign in'),
           ),
           RaisedButton(
+            textColor: Colors.white,
+            color: Colors.red,
+            padding: const EdgeInsets.all(8.0),
             onPressed: navigateToSignUp,
             child: Text('Sign up'),
           ),

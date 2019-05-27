@@ -65,7 +65,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
 
-              Padding(padding: EdgeInsets.only(bottom: 30.0),child:new Image.asset('assets/images/logo.png',height: 25.0,fit: BoxFit.scaleDown,))
+              Padding(padding: EdgeInsets.only(bottom: 30.0),child:new Image.asset('assets/images/fLogo.png',height: 25.0,fit: BoxFit.scaleDown,))
 
 
           ],),
@@ -73,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               new Image.asset(
-                'assets/images/logo.png',
+                'assets/images/fLogo.png',
                 width: animation.value * 250,
                 height: animation.value * 250,
               ),
