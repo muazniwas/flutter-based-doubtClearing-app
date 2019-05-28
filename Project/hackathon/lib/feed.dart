@@ -51,8 +51,8 @@ class Momstabs extends State<Feed>  with SingleTickerProviderStateMixin {
       controller: _tabcontroller,
       children: <Widget>[
         new Tab1(),
-        new Tab2(),
-        new Tab3(userEmail: widget.user.email,),
+        new Tab2(userEmail: widget.user.email,k:widget.user.uid),
+        new Tab3(userEmail: widget.user.email,k:widget.user.uid),
 
       ],
     ),
