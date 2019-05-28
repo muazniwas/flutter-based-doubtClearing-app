@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 class OnTapPost extends StatefulWidget {
-  final String name;
-  final String email;
+  final String title;
+  final String body;
 
-
-
-  OnTapPost({Key key, this.name,this.email}) : super(key: key);
+  OnTapPost({Key key, this.title,this.body}) : super(key: key);
 
   @override
   OnTapPageState createState() => new OnTapPageState();
@@ -17,14 +15,13 @@ class OnTapPageState extends State<OnTapPost> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("Next Page"),
+        title: new Text("${widget.title}"),
       ),
       body: Text(
-        "${widget.name} with the email ${widget.email}",
+        "${widget.title} \n\n ${widget.body}",
         textAlign: TextAlign.center,
         style: TextStyle(fontWeight: FontWeight.bold),
       )
     );
   }
 }
-
