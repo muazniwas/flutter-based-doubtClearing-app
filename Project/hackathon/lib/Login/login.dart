@@ -25,13 +25,13 @@ class LoginScreenState extends State<Login> {
                 height:  250,),
           SimpleRoundButton(
             textColor: Colors.white,
-            backgroundColor: Colors.lightGreen,
+            backgroundColor: Colors.pink[200],
             onPressed: navigateToSignIn,
             buttonText: Text('Sign in'),
           ),
           SimpleRoundButton(
             textColor: Colors.white,
-            backgroundColor: Colors.orangeAccent,
+            backgroundColor: Colors.pink[200],
             onPressed: navigateToSignUp,
             buttonText: Text('Sign up'),
           ),
