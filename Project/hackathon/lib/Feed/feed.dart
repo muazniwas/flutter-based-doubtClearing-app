@@ -1,29 +1,24 @@
 import 'package:firebase_database/firebase_database.dart';
-// import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
-// import 'package:hackathon/Tabs/tab1.dart';
-// import 'package:hackathon/Tabs/tab2.dart';
-// import 'package:hackathon/Tabs/tab3.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:hackathon/page_transformer.dart';
-import 'Tabs/Tab2/item.dart';
-// import 'Tabs/Tab2/item2.dart';
-// import 'Tabs/Tab2/onTap.dart';
-import 'Tabs/Tab2/onTap2.dart';
-import 'Tabs/Tab2/onTapAddPost.dart';
-import 'intro_page_item.dart';
+import 'package:hackathon/ui/intro_page_item.dart';
+import 'package:hackathon/ui/page_transformer.dart';
 
-class Feed2 extends StatefulWidget {
+import 'item.dart';
+import 'onTapAddPost.dart';
+import 'onTapQuestion.dart';
+
+class Feed extends StatefulWidget {
 
    final FirebaseUser user;
-  Feed2({Key key, this.user}) : super(key: key);
+  Feed({Key key, this.user}) : super(key: key);
 
   @override
-  Feed2State createState() => Feed2State(); 
+  FeedState createState() => FeedState(); 
 
 }
 
-class Feed2State extends State<Feed2>{
+class FeedState extends State<Feed>{
 
   List<Item> items = List();
   Item item;

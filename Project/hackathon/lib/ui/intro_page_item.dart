@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Tabs/Tab2/item.dart';
+import 'package:hackathon/Feed/item.dart';
 import 'package:meta/meta.dart';
-// import 'package:toast/toast.dart';
-
-// import 'data.dart';
 import 'page_transformer.dart';
 
 class IntroPageItem extends StatelessWidget {

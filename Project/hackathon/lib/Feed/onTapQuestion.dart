@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Tabs/Tab2/item.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
-
-// import 'Tab2/onTap.dart';
-import 'onTap.dart';
+import 'item.dart';
+import 'onTapListItem.dart';
 
 
 class OnTap2 extends StatefulWidget {

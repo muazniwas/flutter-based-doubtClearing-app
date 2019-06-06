@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon/Login/sign_in.dart';
 import 'package:hackathon/Login/sign_up.dart';
-
-import '../button.dart';
+import 'package:hackathon/ui/button.dart';
 
 class Login extends StatefulWidget {
   @override

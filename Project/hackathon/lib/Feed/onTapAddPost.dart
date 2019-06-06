@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon/Tabs/Tab2/item.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'item.dart';
+import 'onTapListItem.dart';
 
-import 'Tab2/onTap.dart';
-
-class Tab2 extends StatefulWidget {
+class OnTapAddPost extends StatefulWidget {
   final String userEmail;
   final String k;
 
-  Tab2({Key key, this.userEmail,this.k}) : super(key: key);
+  OnTapAddPost({Key key, this.userEmail,this.k}) : super(key: key);
   @override
-  Tab2State createState() => Tab2State(); 
+  OnTapAddPostState createState() => OnTapAddPostState(); 
 }
-class Tab2State extends State<Tab2>{
+class OnTapAddPostState extends State<OnTapAddPost>{
   List<Item> items = List();
   Item item;
   DatabaseReference itemRef,itemRef2;
@@ -60,6 +59,10 @@ class Tab2State extends State<Tab2>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text('Ask Your Question'),
+      ),
      body: Column(
         children: <Widget>[
           Flexible(
@@ -71,7 +74,7 @@ class Tab2State extends State<Tab2>{
                   direction: Axis.vertical,
                   children: <Widget>[
                     ListTile(
-                      leading: Icon(Icons.info),
+                      leading: Icon(Icons.all_out,color: Colors.black),
                       
                       title: TextFormField(
                         initialValue: "",
@@ -80,7 +83,7 @@ class Tab2State extends State<Tab2>{
                       ),
                     ),
                     ListTile(
-                      leading: Icon(Icons.info),
+                      leading: Icon(Icons.all_out,color: Colors.black,),
                       title: TextFormField(
                         initialValue: '',
                         onSaved: (val) => item.body = val,
@@ -88,7 +91,7 @@ class Tab2State extends State<Tab2>{
                       ),
                     ),
                     IconButton(
-                      icon: Icon(Icons.send),
+                      icon: Icon(Icons.send,color: Colors.black),
                       onPressed: () {
                         handleSubmit();
                       },
@@ -98,6 +101,14 @@ class Tab2State extends State<Tab2>{
               ),
             ),
           ),
+          Text("Ask"),
+          
+          
+           Divider(),
+         
+          
+           Text("Your Previous Questions",style: TextStyle(fontSize: 20),),
+          
           Flexible(
             child: FirebaseAnimatedList(
               query: itemRef,
